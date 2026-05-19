@@ -182,7 +182,7 @@ function blobParse(text: string, source: string): PartialSubject[] {
 
     seen.add(code);
     // Emit even when grade is unrecognised — user will see the warning and fix it.
-    results.push({ code, name, credits, grade: VALID_GRADES.includes(grade as any) ? grade : "", source });
+    results.push({ code, name, credits, grade: VALID_GRADES.has(grade) ? grade : "", source });
   }
 
   return results;
@@ -222,7 +222,7 @@ function lineParse(lines: string[], source: string): PartialSubject[] {
       .replace(/(\s+\d){2,3}\s*$/, "")
       .trim() || code;
 
-    results.push({ code, name, credits, grade: VALID_GRADES.includes(grade as any) ? grade : "", source });
+    results.push({ code, name, credits, grade: VALID_GRADES.has(grade) ? grade : "", source });
   }
 
   return results;
