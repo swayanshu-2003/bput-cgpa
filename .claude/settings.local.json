@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "Bash(npm ls *)",
+      "Bash(npm run *)",
+      "Bash(Get-ChildItem -Path \"d:\\\\projects2\\\\bput-cgpa\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"d:\\\\projects2\\\\bput-cgpa\" -Depth 0 | Where-Object { $_.PSIsContainer -or $_.Extension -in @\\('.json', '.md', '.config', '.env'\\) } | Select-Object Name, PSIsContainer)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "PowerShell($job = Start-Job -ScriptBlock { Set-Location \"d:\\\\projects2\\\\bput-cgpa\"; npm run dev 2>&1 }; Start-Sleep -Seconds 8; Receive-Job $job; $job | Stop-Job)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3001\" -UseBasicParsing -TimeoutSec 5; $r.StatusCode)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5; $r.StatusCode)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 8; $r.StatusCode)",
+      "PowerShell(Set-Location \"d:\\\\projects2\\\\bput-cgpa\"; $job = Start-Job -ScriptBlock { Set-Location \"d:\\\\projects2\\\\bput-cgpa\"; npm run dev 2>&1 }; Start-Sleep -Seconds 10; $out = Receive-Job $job; $job | Stop-Job; $out)",
+      "PowerShell(Get-ChildItem -Path \"d:\\\\projects2\\\\bput-cgpa\" -Name | Where-Object { $_ -notlike \"node_modules\" })",
+      "Bash(Get-ChildItem -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "PowerShell(Get-ChildItem -Recurse -Path \"D:\\\\projects2\\\\bput-cgpa\" -Exclude \"node_modules\", \".next\", \".git\" -Force | Where-Object { $_.PSIsContainer -or $_.Extension -in '.tsx', '.ts', '.css', '.json', '.md', '.mdx' } | Select-Object -ExpandProperty FullName | Sort-Object)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); ['GraduationCap','Award','FileDown','Zap','Sparkles'].forEach\\(n => console.log\\(n, !!l[n]\\)\\)\")",
+      "Bash(cd /mnt/d/projects2/bput-cgpa && npx tsc --noEmit 2>&1 | head -40)",
+      "Read(//mnt/d/projects2/**)"
+    ]
+  }
+}

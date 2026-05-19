@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+@layer components {
+
+  /* Card container */
+  .card {
+    @apply bg-white dark:bg-[#0d1a36] border border-slate-200 dark:border-[#162040] rounded-2xl p-5 sm:p-7 mb-4 sm:mb-[18px] shadow-sm transition-colors duration-200;
+  }
+
+  /* All number / text inputs */
+  .form-input {
+    @apply w-full bg-white dark:bg-[#0d1a36] border-[1.5px] border-slate-300 dark:border-[#1e2f58] text-slate-900 dark:text-slate-200 rounded-[10px] px-3 sm:px-3.5 py-2 sm:py-2.5 text-sm outline-none transition-all duration-200 placeholder:text-slate-400 dark:placeholder:text-slate-600 focus:border-indigo-500 dark:focus:border-indigo-400 focus:shadow-[0_0_0_3px_rgba(79,70,229,0.14)] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Primary (filled) button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-1.5 bg-indigo-600 dark:bg-indigo-500 text-white border-[1.5px] border-indigo-600 dark:border-indigo-500 rounded-[10px] px-4 sm:px-5 py-2.5 text-sm font-semibold cursor-pointer select-none transition-all duration-200 hover:bg-indigo-700 dark:hover:bg-indigo-400 hover:border-indigo-700 dark:hover:border-indigo-400 hover:shadow-[0_4px_14px_rgba(79,70,229,0.28)] disabled:opacity-45 disabled:cursor-not-allowed disabled:shadow-none;
+  }
+
+  /* Ghost / secondary button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1.5 bg-white dark:bg-[#0d1a36] text-slate-700 dark:text-slate-300 border-[1.5px] border-slate-300 dark:border-[#1e2f58] rounded-[10px] px-4 sm:px-5 py-2.5 text-sm font-semibold cursor-pointer select-none transition-all duration-200 hover:bg-slate-50 dark:hover:bg-[#0f2040] hover:border-indigo-200 dark:hover:border-indigo-800 hover:text-indigo-600 dark:hover:text-indigo-400;
+  }
+}
+
+@layer utilities {
+  /* Safe-area bottom padding for modal sheets on iOS */
+  .pb-safe {
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}

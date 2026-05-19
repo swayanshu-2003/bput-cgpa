@@ -1,0 +1,28 @@
+{
+  "name": "BPUT CGPA Calculator",
+  "short_name": "BPUT CGPA",
+  "description": "Free CGPA and SGPA calculator for Biju Patnaik University of Technology students.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "categories": ["education", "utilities"],
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "BPUT CGPA Calculator home screen"
+    }
+  ]
+}
